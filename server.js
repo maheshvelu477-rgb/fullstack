@@ -1,19 +1,18 @@
-const express = require("express");
-const path = require("path");
+const express = require('express');
+const path = require('path');
 const app = express();
-
-// Serve React build
-app.use(express.static(path.join(__dirname, "client", "build")));
-
-// API routes
-app.get("/api/hello", (req, res) => {
-  res.json({ message: "Hello from server!" });
-});
-
-// Catch-all for React Router
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
-
 const PORT = process.env.PORT || 5000;
+
+// Serve React frontend from client/build
+app.use(express.static(path.join(__dirname, '../client/build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+});
+
+// Example API route
+app.get('/api/test', (req, res) => {
+  res.json({ message: 'API works!' });
+});
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
