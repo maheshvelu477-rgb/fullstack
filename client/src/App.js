@@ -21,6 +21,7 @@ import Add_gallery from './products/Add_gallery';
 import View_gallery from './products/View_gallery';
 import UpdateGallery from "./updategallery/Updategallery"; // create this component
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
 const router = createBrowserRouter([// Creates a router object to define app routes.
   
     {
@@ -109,10 +110,8 @@ const router = createBrowserRouter([// Creates a router object to define app rou
     path:"/testimonial",
     element:<Testimonial />
   }
-  
- 
-  
 ]);
+
 function App() {
   return (
   <div className="App">
