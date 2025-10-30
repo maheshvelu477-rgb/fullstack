@@ -22,7 +22,7 @@
 
 // server.js (Runs from the root directory, contains main server logic)
 
-const express = require('express');
+ const express = require('express');
 const path = require('path');
 const app = express();
 // Import the 'cors' package, as it is listed in your package.json dependencies
