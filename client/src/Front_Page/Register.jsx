@@ -72,7 +72,7 @@ function Register() {
          <button>
          Register
          </button>
-         <p style={{color:"black", marginTop:"20px"}}>Do you have already Account? <Link to='/login' style={{color:"blue", display:"flex "}}>Login here</Link></p>
+         <p style={{color:"black", marginTop:"20px"}}>Do you have already Account? <Link to='/' style={{color:"blue", display:"flex "}}>Login here</Link></p>
        </div>
      </form>
            
