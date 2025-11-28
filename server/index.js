@@ -9,8 +9,8 @@ const app = express();
 dotenv.config();
 // Middleware
 app.use(bodyParser.json());
-// app.use(cors());
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(cors());
+// app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 // Serve uploaded images statically
 app.use("/uploads", express.static("uploads"));
 // MongoDB Connection
@@ -26,5 +26,6 @@ mongoose.connect(MONGOURL)
   .catch((error) => console.log("MongoDB connection error:", error));
 
 // Routes
+
 app.use("/api", route);
 
