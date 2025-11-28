@@ -14,7 +14,7 @@ const Update = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/product/${id}`)
+      .get(`https://salon-be.vercel.app/api/product/${id}`)
       .then((response) => {
         setProduct(response.data);
       })
@@ -45,7 +45,7 @@ console.log(product.name)
     }
 
     try {
-      await axios.put(`http://localhost:8000/api/update/product/${id}`, formData, {
+      await axios.put(`https://salon-be.vercel.app/api/update/product/${id}`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

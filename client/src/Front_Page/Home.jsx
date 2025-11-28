@@ -61,7 +61,7 @@ function Home() {
     console.log("Sending Data:", booking );
    
     try {
-      const response = await axios.post("http://localhost:8000/api/booking", {
+      const response = await axios.post("https://salon-be.vercel.app/api/booking", {
         name: booking.name,
         email: booking.email,
         service: booking.service,
@@ -98,7 +98,7 @@ function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/gallery");
+        const response = await axios.get("https://salon-be.vercel.app/api/gallery");
         setGallery(response.data);
       } catch (error) {
         console.log("Error while fetching data", error);
@@ -110,7 +110,7 @@ function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/products");
+        const response = await axios.get("https://salon-be.vercel.app/api/products");
         setProducts(response.data);
       } catch (error) {
         console.log("Error while fetching data", error);
@@ -477,7 +477,7 @@ function Home() {
                     <div class="price-item mb-3 wow fadeIn" data-wow-delay="0.1s">
                         {product.image ? (
                             <img 
-                                src={`http://localhost:8000${product.image}`} 
+                                src={`https://salon-be.vercel.app${product.image}`} 
                                 alt="User" 
                                 width="250" 
                                 height="250" 
@@ -514,7 +514,7 @@ function Home() {
                     <div class="gallery-item h-100">
                         {gall.image ?(
                         <img 
-                        src={`http://localhost:8000${gall.image}`} 
+                        src={`https://salon-be.vercel.app${gall.image}`} 
                         class="img-fluid w-100 h-100" 
                         alt=""
                         /> 

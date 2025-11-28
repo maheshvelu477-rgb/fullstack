@@ -8,7 +8,7 @@ const View_products = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/products");
+        const response = await axios.get("https://salon-be.vercel.app/api/products");
         setProducts(response.data);
       } catch (error) {
         console.log("Error while fetching data", error);
@@ -19,7 +19,7 @@ const View_products = () => {
 
   const deleteProduct = async (productId) => {
     await axios
-      .delete(`http://localhost:8000/api/delete/product/${productId}`)
+      .delete(`https://salon-be.vercel.app/api/delete/product/${productId}`)
       .then(() => {
         setProducts((prevProducts) => prevProducts.filter((product) => product._id !== productId));
       })
@@ -91,7 +91,7 @@ const View_products = () => {
               <td>
                 {product.image ? (
                   <img 
-                    src={`http://localhost:8000${product.image}`} 
+                    src={`https://salon-be.vercel.app${product.image}`} 
                     alt="User" 
                     width="50" 
                     height="50" 

@@ -13,7 +13,7 @@ const Updategallery = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/gallery/${id}`)
+      .get(`https://salon-be.vercel.app/api/gallery/${id}`)
       .then((response) => {
         setGallery(response.data);
       })
@@ -44,7 +44,7 @@ console.log(gallery.name)
     }
 
     try {
-      await axios.put(`http://localhost:8000/api/update/gallery/${id}`, formData, {
+      await axios.put(`https://salon-be.vercel.app/api/update/gallery/${id}`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

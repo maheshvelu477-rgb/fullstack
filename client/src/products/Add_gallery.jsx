@@ -35,7 +35,7 @@ function Add_gallery() {
     formData.append("image", user.image);  // Ensure file is sent correctly
 
     try {
-        await axios.post("http://localhost:8000/api/gallery", formData, {
+        await axios.post("https://salon-be.vercel.app/api/gallery", formData, {
             headers: { "Content-Type": "multipart/form-data" } // The Content-Type: multipart/form-data header 
             // ensures the request properly transmits the file and text data.
         });

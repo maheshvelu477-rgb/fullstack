@@ -11,7 +11,7 @@ function Gallery(){
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/gallery");
+        const response = await axios.get("https://salon-be.vercel.app/api/gallery");
         setGallery(response.data);
       } catch (error) {
         console.log("Error while fetching data", error);
@@ -100,7 +100,7 @@ return(
                     <div class="gallery-item h-100">
                         {gall.image ?(
                         <img 
-                        src={`http://localhost:8000${gall.image}`} 
+                        src={`https://salon-be.vercel.app${gall.image}`} 
                         class="img-fluid w-100 h-100" 
                         alt=""
                         /> 

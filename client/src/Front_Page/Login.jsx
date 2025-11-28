@@ -20,7 +20,7 @@ import axios from "axios";
     console.log("Sending Data:", user);
    
     try {
-      const response = await axios.post("http://localhost:8000/api/login", {
+      const response = await axios.post("https://salon-be.vercel.app/api/login", {
         name: user.name,
         email: user.email,
       });

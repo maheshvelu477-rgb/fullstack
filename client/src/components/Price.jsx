@@ -10,7 +10,7 @@ function Price(){
     useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/products");
+        const response = await axios.get("https://salon-be.vercel.app/api/products");
         setProducts(response.data);
       } catch (error) {
         console.log("Error while fetching data", error);
@@ -118,7 +118,7 @@ return(
                     <div class="price-item mb-3 wow fadeIn" data-wow-delay="0.1s">
                         {product.image ? (
                             <img 
-                                src={`http://localhost:8000${product.image}`} 
+                                src={`https://salon-be.vercel.app${product.image}`} 
                                 alt="User" 
                                 width="250" 
                                 height="250" 
